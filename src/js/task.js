@@ -1,8 +1,7 @@
 export default class Task {
-    constructor(name) {
-        this.id;
-        this.name = name;
-        this.type = 'active';
-    }
-
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+    this.type = 'active';
+  }
 }
