@@ -1,5 +1,6 @@
 import Task from './task';
 
+
 const input = document.querySelector('.input');
 const activeTasksList = document.querySelector('.active-tasks-list');
 const pinnedTasksList = document.querySelector('.pinned-tasks-list');
@@ -53,10 +54,10 @@ function redraw(arr) {
     hiddenTasks(arr);
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].type === 'active') {
-        activeTasksList.insertAdjacentHTML('beforeend', `<div id = ${arr[i].id} class="task all"> <span class="active-name">${arr[i].name}</span> </div>`);
+        activeTasksList.insertAdjacentHTML('beforeend', `<div id = ${arr[i].id} class="task all"> <span class="active-name">${arr[i].name}</span> <img class="circle" src="src/pic/emptyCircle.png"> </div>`);
       }
       if (arr[i].type === 'pinned') {
-        pinnedTasksList.insertAdjacentHTML('beforeend', `<div id = ${arr[i].id} class="task pinned"> <span class="pinned-name">${arr[i].name}</span> </div>`);
+        pinnedTasksList.insertAdjacentHTML('beforeend', `<div id = ${arr[i].id} class="task pinned"> <span class="pinned-name">${arr[i].name}</span> <img class="circle" src="src/pic/markedCircle.jpg"> </div>`);
       }
     }
   }

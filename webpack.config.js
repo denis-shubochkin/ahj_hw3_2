@@ -16,10 +16,10 @@ module.exports = {
           'file-loader',
           {
             loader: 'image-webpack-loader',
-            // options: {
-            //   bypassOnDebug: true, // webpack@1.x
-            //   disable: true, // webpack@2.x and newer
-            // },
+            options: {
+              bypassOnDebug: true, // webpack@1.x
+              disable: false, // webpack@2.x and newer
+            },
           },
         ],
       },
