@@ -1,4 +1,6 @@
 import Task from './task';
+import emptyCircle from '../pic/emptyCircle.png';
+import markedCircle from '../pic/markedCircle.jpg';
 
 
 const input = document.querySelector('.input');
@@ -54,10 +56,10 @@ function redraw(arr) {
     hiddenTasks(arr);
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].type === 'active') {
-        activeTasksList.insertAdjacentHTML('beforeend', `<div id = ${arr[i].id} class="task all"> <span class="active-name">${arr[i].name}</span> <img class="circle" src="src/pic/emptyCircle.png"> </div>`);
+        activeTasksList.insertAdjacentHTML('beforeend', `<div id = ${arr[i].id} class="task all"> <span class="active-name">${arr[i].name}</span> <img class="circle" src="${emptyCircle}"> </div>`);
       }
       if (arr[i].type === 'pinned') {
-        pinnedTasksList.insertAdjacentHTML('beforeend', `<div id = ${arr[i].id} class="task pinned"> <span class="pinned-name">${arr[i].name}</span> <img class="circle" src="src/pic/markedCircle.jpg"> </div>`);
+        pinnedTasksList.insertAdjacentHTML('beforeend', `<div id = ${arr[i].id} class="task pinned"> <span class="pinned-name">${arr[i].name}</span> <img class="circle" src="${markedCircle}"> </div>`);
       }
     }
   }
